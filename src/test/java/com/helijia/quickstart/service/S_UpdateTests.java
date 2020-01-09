@@ -1,6 +1,7 @@
 package com.helijia.quickstart.service;
 
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.helijia.quickstart.common.enums.GenderEnum;
 import com.helijia.quickstart.module.student.entity.Student;
 import com.helijia.quickstart.module.student.service.StudentService;
 import org.junit.jupiter.api.Test;
@@ -51,8 +52,8 @@ public class S_UpdateTests {
     @Test
     public void updateBatchById() {
         List<Student> list = new ArrayList<>();
-        list.add(new Student(5, "Angela", 25, "angela@qq.com", new Date(), 0));
-        list.add(new Student(6, "Alice", 22, "alice@qq.com", new Date(), 0));
+        list.add(new Student(5, "Angela", 25, GenderEnum.FEMALE,"angela@qq.com", new Date(), 0));
+        list.add(new Student(6, "Alice", 22, GenderEnum.FEMALE,"alice@qq.com", new Date(), 0));
 
         Assert.isTrue(service.updateBatchById(list), "修改失败");
     }
