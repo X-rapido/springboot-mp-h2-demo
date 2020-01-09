@@ -2,7 +2,6 @@ package com.helijia.quickstart.module.student.entity;
 
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.helijia.quickstart.common.enums.GenderEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -35,11 +34,6 @@ public class Student {
      * 年龄
      */
     private Integer age;
-
-    /**
-     * 枚举： 0：男， 1：女
-     */
-    private GenderEnum gender;
 
     /**
      * 邮箱
