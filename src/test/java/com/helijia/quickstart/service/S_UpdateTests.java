@@ -52,8 +52,8 @@ public class S_UpdateTests {
     @Test
     public void updateBatchById() {
         List<Student> list = new ArrayList<>();
-        list.add(new Student(5, "Angela", 25, GenderEnum.FEMALE,"angela@qq.com", new Date(), 0));
-        list.add(new Student(6, "Alice", 22, GenderEnum.FEMALE,"alice@qq.com", new Date(), 0));
+        list.add(new Student(5, "Angela", 25, GenderEnum.FEMALE,"angela@qq.com", new Date(), 0,0));
+        list.add(new Student(6, "Alice", 22, GenderEnum.FEMALE,"alice@qq.com", new Date(), 0,0));
 
         Assert.isTrue(service.updateBatchById(list), "修改失败");
     }

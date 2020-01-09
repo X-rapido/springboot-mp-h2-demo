@@ -1,8 +1,7 @@
 package com.helijia.quickstart.common.config;
 
+import com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilderCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -21,10 +20,10 @@ public class MybatisPlusConfig {
     }
 
     /**
-     * 重写toString方法
+     * 乐观锁插件
      */
     @Bean
-    public Jackson2ObjectMapperBuilderCustomizer customizer(){
-        return builder -> builder.featuresToEnable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
+    public OptimisticLockerInterceptor optimisticLockerInterceptor() {
+        return new OptimisticLockerInterceptor();
     }
 }
