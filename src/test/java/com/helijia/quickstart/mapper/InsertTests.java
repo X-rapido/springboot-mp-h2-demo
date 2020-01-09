@@ -23,7 +23,6 @@ public class InsertTests {
     @Test
     public void insert() {
         Student stu = new Student();
-        stu.setId(10);
         stu.setAge(21);
         stu.setName("苹果");
         stu.setEmail("apple@qq.com");

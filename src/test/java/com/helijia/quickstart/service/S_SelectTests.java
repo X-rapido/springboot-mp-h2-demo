@@ -29,7 +29,7 @@ public class S_SelectTests {
     }
 
     /**
-     * 根据 Wrapper，查询一条记录
+     * 根据 Wrapper，查询一条记录，查询多个会出异常，追加 last("limit 1")
      * <p>
      * default T getOne(Wrapper<T> queryWrapper);
      * <p>
@@ -40,11 +40,11 @@ public class S_SelectTests {
     @Test
     public void getOne() {
         // 单个对象，常规方式
-        Student stu_1 = service.getOne(new QueryWrapper<Student>().ge("id", 2));
+        Student stu_1 = service.getOne(new QueryWrapper<Student>().ge("id", 2).last("limit 1"));
         System.out.println("stu_1：" + stu_1.toString());
 
         // 单个对象，lambda表达式方式
-        Student stu_2 = service.getOne(new QueryWrapper<Student>().lambda().ge(Student::getId, 2), true);
+        Student stu_2 = service.getOne(new QueryWrapper<Student>().lambda().ge(Student::getId, 2), false);
         System.out.println("stu_2：" + stu_2.toString());
     }
 
@@ -139,10 +139,8 @@ public class S_SelectTests {
      */
     @Test
     public void page() {
-        Page<Student> page = new Page<>(1, 3);
-
         // 年龄大于等于18
-        IPage<Student> selectPage = service.page(page, new QueryWrapper<Student>().ge("age", 18));
+        IPage<Student> selectPage = service.page(new Page<>(1, 3), new QueryWrapper<Student>().ge("age", 18));
         System.out.println(JsonUtil.obj2String(selectPage));
     }
 

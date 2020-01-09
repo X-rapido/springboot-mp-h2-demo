@@ -1,6 +1,8 @@
 package com.helijia.quickstart.module.student.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.Version;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.helijia.quickstart.common.enums.GenderEnum;
 import lombok.AllArgsConstructor;
@@ -22,8 +24,9 @@ import java.util.Date;
 public class Student {
 
     /**
-     * 姓名
+     * 主键ID
      */
+    @TableId
     private Integer id;
 
     /**
@@ -52,10 +55,17 @@ public class Student {
     private Date createTime;
 
     /**
+     * 乐观锁配置
+     */
+    @Version
+    private Integer version;
+
+    /**
      * 逻辑删除标识
      */
     @JsonIgnore
     @TableLogic
     private Integer isDelete;
+
 
 }

@@ -17,6 +17,9 @@ spring:
 # MybatisPlus
 mybatis-plus:
   type-enums-package: com.helijia.quickstart.common.enums
+  global-config:
+    db-config:
+      id-type: AUTO # 主键策略
 
 # 日志
 logging:
