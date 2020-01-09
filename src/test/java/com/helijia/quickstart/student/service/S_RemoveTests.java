@@ -1,4 +1,4 @@
-package com.helijia.quickstart.service;
+package com.helijia.quickstart.student.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.helijia.quickstart.module.student.entity.Student;

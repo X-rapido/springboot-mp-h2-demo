@@ -1,4 +1,4 @@
-package com.helijia.quickstart.mapper;
+package com.helijia.quickstart.student.mapper;
 
 import com.helijia.quickstart.module.student.entity.Student;
 import com.helijia.quickstart.module.student.mapper.StudentMapper;

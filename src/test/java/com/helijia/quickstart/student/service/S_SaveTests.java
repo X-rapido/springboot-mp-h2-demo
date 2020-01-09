@@ -1,4 +1,4 @@
-package com.helijia.quickstart.service;
+package com.helijia.quickstart.student.service;
 
 import com.helijia.quickstart.module.student.entity.Student;
 import com.helijia.quickstart.module.student.service.StudentService;

@@ -1,4 +1,4 @@
-package com.helijia.quickstart.mapper;
+package com.helijia.quickstart.student.mapper;
 
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.helijia.quickstart.module.student.entity.Student;

@@ -1,4 +1,4 @@
-package com.helijia.quickstart.mapper;
+package com.helijia.quickstart.student.mapper;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
