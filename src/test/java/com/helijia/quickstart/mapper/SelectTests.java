@@ -50,11 +50,11 @@ public class SelectTests {
     @Test
     public void selectOne() {
         // 单个对象，常规方式
-        Student stu_1 = mapper.selectOne(new QueryWrapper<Student>().ge("id", 2));
+        Student stu_1 = mapper.selectOne(new QueryWrapper<Student>().ge("id", 2).last("limit 1"));
         System.out.println("stu_1：" + stu_1.toString());
 
         // 单个对象，lambda表达式方式
-        Student stu_2 = mapper.selectOne(new QueryWrapper<Student>().lambda().ge(Student::getId, 2));
+        Student stu_2 = mapper.selectOne(new QueryWrapper<Student>().lambda().ge(Student::getId, 2).last("limit 1"));
         System.out.println("stu_2：" + stu_2.toString());
     }
 
