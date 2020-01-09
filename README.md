@@ -1,4 +1,4 @@
-# Spring Boot 2.x 整合 Mybatis-plus 实现 H2 数据库 CRUD（完整示例）
+# Spring Boot 2.x 整合 Mybatis-plus 实现 H2 数据库 CRUD
 
 | 分支 | 说明 |
 |---|---|
@@ -10,6 +10,8 @@
 
 ## 使用
 ### 1、代码生成
+
+教程：https://mp.baomidou.com/guide/generator.html
 
 #### （1）依赖包
 ```xml
