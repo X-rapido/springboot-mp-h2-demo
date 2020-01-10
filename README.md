@@ -42,3 +42,27 @@ spring:
     username: root
     password: test
 ```
+
+
+### 注解说明
+@TableLogic
+- 描述：表字段逻辑处理注解（逻辑删除）
+
+| 属性	| 类型	| 必须指定	| 默认值	| 描述 | 
+|---|---|---|---|---|
+| value	|  String	| 否	| ""	| 逻辑未删除值 | 
+| delval | 	String	| 否	| ""	| 逻辑删除值 |
+
+
+```java
+@TableLogic
+private Integer deleted;
+
+
+@TableLogic(delval = "null", value = "1")
+private Integer deleted;
+
+
+@TableLogic(delval = "now()", value = "null")
+private LocalDateTime delTime;
+```

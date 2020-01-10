@@ -1,4 +1,4 @@
-package com.helijia.quickstart.module.other.entity.mapper;
+package com.helijia.quickstart.module.other.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.helijia.quickstart.module.other.entity.Null2;
